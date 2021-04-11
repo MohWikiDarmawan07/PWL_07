@@ -78,7 +78,7 @@ class MahasiswaController extends Controller
     {
         //menampilkan detail data dengan menemukan/berdasarkan Nim Mahasiswa
         $Mahasiswa = Mahasiswa::with('kelas')->where('nim', $Nim)->first();
-        return view('mahasiswas.detail', compact('Mahasiswa' => $mahasiswa));
+        return view('mahasiswas.detail', ['Mahasiswa' => $mahasiswa]);
     }
 
     /**
