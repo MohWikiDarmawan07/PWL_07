@@ -19,4 +19,12 @@
         </div>
     </div>
 </div>
+@foreeach ($paginate as $mhs)
+<tr>
+
+    <td>{{ $mhs->nim}}</td>
+    <td>{{ $mhs->nama}}</td>
+    <td>{{ $mhs->kelas->nama_kelas}}</td>
+    <td>{{ $mhs->jurusan}}</td>
+</tr>
 @endsection

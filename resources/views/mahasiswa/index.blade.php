@@ -41,7 +41,14 @@
         </form>
     </td>
 </tr>
-@endforeach
+@foreeach ($paginate as $mhs)
+<tr>
+
+    <td>{{ $mhs->nim}}</td>
+    <td>{{ $mhs->nama}}</td>
+    <td>{{ $mhs->kelas->nama_kelas}}</td>
+    <td>{{ $mhs->jurusan}}</td>
+</tr>
 </table>
 <div class="d-flex float-right">
     {{$posts->links('pagination::bootstrap-4')}}
