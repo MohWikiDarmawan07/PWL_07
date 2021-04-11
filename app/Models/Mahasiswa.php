@@ -11,15 +11,19 @@ use Illuminate\Database\Eloquent\Model;
 class Mahasiswa extends Model
 {
     protected $table='mahasiswa'; //Eloquent akan membuat model mahasiswa menyimpan record di table mahasiswas
-    public $timestamps=false;
+    
     protected $primaryKey='nim'; //Mengambil isi DB dengan primaryKey
 
     protected $fillable = [
         'nim',
         'nama',
-        'kelas',
+        'kelas_id',
         'jurusan',
-        'no_handphone',
+        
         
     ];
+    public function kelas()
+    {
+        return $this->belongsTo(kelas::class);
+    }
 }
