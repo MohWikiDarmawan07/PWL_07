@@ -38,6 +38,14 @@
             <input type="no_handphone" name="no_handphone" class="form-control" id="no_handphone" aria-describedby="no_handphone" >
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
+        <div class="form-group">
+        <label for ="kelas">kelas</label>
+        <select class="form-control">
+        @foreach($kelas as $kls)
+        <option value="{{$kls->nama_id}}">{{$kls->nama_kelas}}</option>
+        @endforeach
+        </select>
+        </div>
     </form>
     </div>
     </div>
