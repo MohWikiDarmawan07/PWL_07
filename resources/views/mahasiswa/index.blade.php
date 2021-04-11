@@ -24,7 +24,7 @@
     <th>No_Handphone</th>
     <th width="280px">Action</th>
 </tr>
-@foreach ($posts as $Mahasiswa)
+@foreach ($mahasiswas as $Mahasiswa)
 <tr>
     <td>{{ $Mahasiswa->nim }}</td>
     <td>{{ $Mahasiswa->name }}</td>
